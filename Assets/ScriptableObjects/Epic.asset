@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6190107eb1dd1e34aa19198c26ca70bb, type: 3}
+  m_Name: Epic
+  m_EditorClassIdentifier: 
+  unlockDuration: 0
+  chestName: 
+  minGems: 0
+  maxGems: 0
+  minCoins: 0
+  maxCoins: 0
