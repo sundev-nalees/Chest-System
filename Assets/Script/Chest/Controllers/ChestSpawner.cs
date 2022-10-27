@@ -8,6 +8,7 @@ namespace ChestSystem
     {
         [SerializeField] ChestScriptable chestScriptable;
         [SerializeField] private float timeToSkipFor1Gem;
+        [SerializeField] GameObject prefab;
 
         private void Start()
         {
@@ -15,10 +16,10 @@ namespace ChestSystem
         
         }
 
-        // Update is called once per frame
-        void Update()
+        public void SpawnChest()
         {
-        
+            Instantiate(prefab,transform);
+            Debug.Log("3");
         }
     }
 }
