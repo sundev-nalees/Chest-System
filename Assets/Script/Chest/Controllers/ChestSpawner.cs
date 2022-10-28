@@ -19,7 +19,7 @@ namespace ChestSystem
         public void SpawnChest()
         {
             Instantiate(prefab,transform);
-            Debug.Log("3");
+            
         }
     }
 }
