@@ -1,4 +1,4 @@
-public enum ChestTypes
+public enum ChestType
 {
     Common,
     Epic,

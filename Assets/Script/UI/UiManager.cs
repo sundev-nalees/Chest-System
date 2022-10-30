@@ -1,5 +1,4 @@
-using System;
-using System.Collections.Generic;
+
 using TMPro;
 using UnityEngine;
 
@@ -50,10 +49,36 @@ namespace ChestSystem
             }
             return false;
         }
+        public bool ReduceGemCount(int amount)
+        {
+            if (gemCount - amount >= 0)
+            {
+                gemCount -= amount;
+                if (gemCountText)
+                {
+                    gemCountText.text = gemCount.ToString();
+                }
+                return true;
+            }
+            return false;
+        }
 
+        public bool ReduceCoinCount(int amount)
+        {
+            if (coinCount - amount > 0)
+            {
+                coinCount -= amount;
+                if (coinCountText)
+                {
+                    coinCountText.text = coinCount.ToString();
+                }
+                return true;
+            }
+            return false;
+        }
         public void OnCreateButtonPressed()
         {
-            Debug.Log("1");
+            
             ChestService chestService = ChestService.Instance;
             if (chestService)
             {

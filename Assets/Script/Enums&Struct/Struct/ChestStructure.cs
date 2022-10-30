@@ -1,9 +1,8 @@
-using ChestSystem;
 using UnityEngine;
 
 [System.Serializable]
 public struct Chests
 {
-    public ChestTypes chestTypes;
+    public ChestType chestTypes;
     public GameObject chestPrefab;
 }

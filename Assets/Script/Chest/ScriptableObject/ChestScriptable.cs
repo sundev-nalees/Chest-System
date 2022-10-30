@@ -6,6 +6,6 @@ namespace ChestSystem
     [CreateAssetMenu(fileName ="ChestList",menuName ="ScriptableObjects/ChestSystem/ChestList")]
     public class ChestScriptable : ScriptableObject
     {
-        public List<ChestObject> ChestList;
+        public List<ChestConfig> ChestList;
     }
 }
