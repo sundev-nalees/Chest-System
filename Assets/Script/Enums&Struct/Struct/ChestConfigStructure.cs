@@ -3,6 +3,6 @@ using ChestSystem;
 [System.Serializable]
 public struct ChestConfig
 {
-    public ChestTypes chestType;
+    public ChestType chestType;
     public ChestObject chestObject;
 }

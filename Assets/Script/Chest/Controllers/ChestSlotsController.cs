@@ -6,7 +6,7 @@ namespace ChestSystem
 {
     public class ChestSlotsController : MonoBehaviour
     {
-        /*[SerializeField] private int numberOfSlots;
+        [SerializeField] private int numberOfSlots;
         [SerializeField] private List<Chests> chests;
         [SerializeField] private GameObject chestSlotPrefb;
         [SerializeField] private float timeToSkipFor1Gem;
@@ -22,10 +22,10 @@ namespace ChestSystem
         {
             for(int i = 0; i < numberOfSlots; i++)
             {
-                chestService = chestService.Instance;
+                chestService = ChestService.Instance;
                 ChestSlotController chestSlotController = Instantiate(chestSlotPrefb, transform).GetComponent<ChestSlotController>();
                 chestSlotController.ChestSlotID=chestSlotController.GetInstanceID();
-                ChestSlot slot = new ChestSlot(chestSlotController.GetInstaceID(), chestSlotController);
+                ChestSlot slot = new ChestSlot(chestSlotController.GetInstanceID(), chestSlotController);
                 chestSlots.Add(slot);
             }
         
@@ -61,15 +61,15 @@ namespace ChestSystem
             chestService.ShowMessage(MsgPopupType.SlotsFull);
         }
 
-        public void ShowUnlocked(ChestUnlockMsg msgObject)
+        public void ShowUnlock(ChestUnlockMsg msgObject)
         {
             if (IsSlotBusy())
             {
-                if (chestService.currentUnlockingChestId != msgObject.chestSlotId && unlockList.Count < unlockQueueSize && !IsInQueue(msgObject.chestSlotId))
+                if (chestService.CurrentUnlockingChestId != msgObject.chestSlotId && unlockList.Count < unlockQueueSize && !IsInQueue(msgObject.chestSlotId))
                 {
                     msgObject.btn1Txt = queueText;
                     Action action = msgObject.btn1Action;
-                    msgObject.btn1Action=new Action(()=> QueueUnlockingAction(msgObject.chestSlotId, action))
+                    msgObject.btn1Action = new Action(() => QueueUnlockingAction(msgObject.chestSlotId, action));
                 }
                 else if (chestService.CurrentUnlockingChestId == msgObject.chestSlotId || IsInQueue(msgObject.chestSlotId) || unlockList.Count >= unlockQueueSize)
                 {
@@ -122,7 +122,7 @@ namespace ChestSystem
             }
             return false;
         }
-        public float GetTimeToSkipFor1Gem { get { return timeToSkipFor1Gem; } }*/
+        public float GetTimeToSkipFor1Gem { get { return timeToSkipFor1Gem; } }
     
 }
 }

@@ -1,12 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace ChestSystem
 {
     public class ChestSlotController : MonoBehaviour
     {
-       /* [SerializeField] private GameObject emptyText;
+        [SerializeField] private GameObject emptyText;
         [SerializeField] private string newChestPopupTitle;
         private bool isEmpty;
         private ChestModel chestModel;
@@ -59,6 +57,6 @@ namespace ChestSystem
 
         public bool UnlockingStatus { get; set; }
 
-        public bool IsQueued { get; set; }*/
+        public bool IsQueued { get; set; }
     }
 }
