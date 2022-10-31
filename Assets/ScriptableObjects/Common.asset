@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6190107eb1dd1e34aa19198c26ca70bb, type: 3}
   m_Name: Common
   m_EditorClassIdentifier: 
-  unlockDuration: 0
-  chestName: 
-  minGems: 0
-  maxGems: 0
-  minCoins: 0
-  maxCoins: 0
+  unlockDuration: 15
+  chestName: Common
+  minGems: 1
+  maxGems: 5
+  minCoins: 10
+  maxCoins: 50

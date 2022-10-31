@@ -1,8 +1,9 @@
 
 using TMPro;
 using UnityEngine;
-
-namespace ChestSystem
+using ChestSystem.Services;
+using System;
+namespace ChestSystem.UI
 {
     public class UiManager : MonoBehaviour
     {
@@ -82,6 +83,7 @@ namespace ChestSystem
             ChestService chestService = ChestService.Instance;
             if (chestService)
             {
+                Debug.Log("button");
                 chestService.SpawnChest();
                
             }

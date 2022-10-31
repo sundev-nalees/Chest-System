@@ -1,8 +1,9 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using ChestSystem.Services;
 
-namespace ChestSystem
+namespace ChestSystem.Chest
 {
     public class ChestSlotsController : MonoBehaviour
     {
@@ -22,6 +23,7 @@ namespace ChestSystem
         {
             for(int i = 0; i < numberOfSlots; i++)
             {
+                
                 chestService = ChestService.Instance;
                 ChestSlotController chestSlotController = Instantiate(chestSlotPrefb, transform).GetComponent<ChestSlotController>();
                 chestSlotController.ChestSlotID=chestSlotController.GetInstanceID();
@@ -45,6 +47,7 @@ namespace ChestSystem
 
         public void SpawnChest(ChestConfig config)
         {
+            
             for(int i = 0; i < chestSlots.Count; i++)
             {
                 if (chestSlots[i].chestSlotController.GetIsEmpty)

@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace ChestSystem
+namespace ChestSystem.Chest.SO
 {
     [CreateAssetMenu(fileName ="ChestList",menuName ="ScriptableObjects/ChestSystem/ChestList")]
     public class ChestScriptable : ScriptableObject

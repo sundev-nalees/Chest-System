@@ -1,6 +1,9 @@
 using UnityEngine;
+using ChestSystem.Services;
+using ChestSystem.Chest.MVC;
 
-namespace ChestSystem
+
+namespace ChestSystem.Chest
 {
     public class ChestSlotController : MonoBehaviour
     {

@@ -1,4 +1,4 @@
-using ChestSystem;
+using ChestSystem.Chest.SO;
 
 [System.Serializable]
 public struct ChestConfig

@@ -1,8 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
+using ChestSystem.Chest.SO;
 using UnityEngine;
+using ChestSystem.Services;
 
-namespace ChestSystem
+namespace ChestSystem.Chest
 {
     public class ChestSpawner : MonoBehaviour
     {
@@ -13,6 +13,10 @@ namespace ChestSystem
         private void Start()
         {
             chestSlotsController = ChestService.Instance.GetChestSlotsController;
+            if (chestSlotsController)
+            {
+                Debug.Log("wtf");
+            }
         }
         public void SpawnChest(ChestType chestType)
         {
@@ -25,9 +29,12 @@ namespace ChestSystem
 
         public void SpawnChest()
         {
+           
             int index = Random.Range(0, chestConfiguration.ChestList.Count);
+            
             if (chestSlotsController)
             {
+                
                 chestSlotsController.SpawnChest(chestConfiguration.ChestList[index]);
             }
 

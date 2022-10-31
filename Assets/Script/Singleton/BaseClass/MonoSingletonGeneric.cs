@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-namespace ChestSystem
+namespace Singleton
 {
     public class MonoSingletonGeneric<T> : MonoBehaviour where T:MonoSingletonGeneric<T>
     {

@@ -1,7 +1,8 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
-namespace ChestSystem
+
+namespace ChestSystem.Chest.MVC
 {
     public class ChestView : MonoBehaviour
     {
