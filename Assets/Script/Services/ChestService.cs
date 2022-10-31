@@ -1,6 +1,9 @@
 using UnityEngine;
+using ChestSystem.UI;
+using ChestSystem.Chest;
+using Singleton;
 
-namespace ChestSystem
+namespace ChestSystem.Services
 {
     public class ChestService : MonoSingletonGeneric<ChestService>
     {
@@ -24,7 +27,8 @@ namespace ChestSystem
 
             public void SpawnChest()
             {
-                chestSpawner.SpawnChest();
+
+            chestSpawner.SpawnChest();
             }
             public void ShowNewUnlockPopup(ChestUnlockMsg msgObject)
             {
@@ -86,7 +90,7 @@ namespace ChestSystem
                 ShowMessage(MsgPopupType.GemStorageFull);
                 return false;
             }
-            public ChestSlotsController GetChestSlotsController { get { return chestSlotsController; } }
+            public ChestSlotsController GetChestSlotsController { get {  return chestSlotsController; } }
 
             public float GetTimeToSkipFor1Gem { get { return chestSpawner.GetTimeToSkipFor1Gem; } }
 

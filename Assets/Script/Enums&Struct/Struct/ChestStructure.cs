@@ -1,4 +1,5 @@
 using UnityEngine;
+using ChestSystem.Chest.SO;
 
 [System.Serializable]
 public struct Chests

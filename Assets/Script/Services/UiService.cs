@@ -1,6 +1,7 @@
 using UnityEngine;
+using Singleton;
 
-namespace ChestSystem
+namespace ChestSystem.UI
 {
     public class UiService : MonoSingletonGeneric<UiService>
     {

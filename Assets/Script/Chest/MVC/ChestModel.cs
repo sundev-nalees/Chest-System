@@ -1,6 +1,6 @@
+using ChestSystem.Chest.SO;
 
-
-namespace ChestSystem
+namespace ChestSystem.Chest.MVC
 {
     public class ChestModel
     {

@@ -1,7 +1,9 @@
 using System;
 using UnityEngine;
+using ChestSystem.Chest.SO;
+using ChestSystem.Services;
 
-namespace ChestSystem
+namespace ChestSystem.Chest.MVC
 {
     public class ChestController 
     {

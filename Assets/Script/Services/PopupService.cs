@@ -1,8 +1,10 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using ChestSystem.UI;
+using Singleton;
 
-namespace ChestSystem
+namespace ChestSystem.Services
 {
     public class PopupService : MonoSingletonGeneric<PopupService>
     {

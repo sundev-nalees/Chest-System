@@ -2,8 +2,9 @@ using TMPro;
 using UnityEngine.UI;
 using System.Collections.Generic;
 using UnityEngine;
+using ChestSystem.Services;
 
-namespace ChestSystem
+namespace ChestSystem.UI
 {
     public class PopupManager : MonoBehaviour
     {
