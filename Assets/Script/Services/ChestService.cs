@@ -28,7 +28,7 @@ namespace ChestSystem.Services
             public void SpawnChest()
             {
 
-            chestSpawner.SpawnChest();
+               chestSpawner.SpawnChest();
             }
             public void ShowNewUnlockPopup(ChestUnlockMsg msgObject)
             {

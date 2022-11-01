@@ -18,8 +18,9 @@ namespace ChestSystem.Chest.MVC
         private bool isUnlocked = false;
 
         public Action StartUnlockingAction;
-        public Action UnlockImmediateAction;    
-        
+        public Action UnlockImmediateAction;
+
+
         public void Start()
         {
             ShowSpawnPopup();
@@ -32,23 +33,21 @@ namespace ChestSystem.Chest.MVC
             gemToUnlock = Mathf.Clamp(gemToUnlock, 1, int.MaxValue);
             StartUnlockingAction = StartUnlockingChest;
             UnlockImmediateAction = UnlockImmediate;
-
         }
 
         public void Update()
         {
             if (startCountDown && !isUnlocked)
             {
-                CheckUnlocked();
+                CheckUnlock();
             }
         }
 
         private void ShowSpawnPopup()
         {
-            Message msg = new Message(chestView.GetSpawnPopupTitle, $"You have acquired a new{chestModel.GetChestObject.name}chest.\n Coin Range {chestModel.GetChestObject.minCoins}-{chestModel.GetChestObject.maxCoins}\n Gems Range {chestModel.GetChestObject.minGems}-{chestModel.GetChestObject.maxGems}");
+            Message msg = new Message(chestView.GetSpawnPopupTitle, $"You have acquired a new {chestModel.GetChestObject.name} chest.\n Coin Range {chestModel.GetChestObject.minCoins} - {chestModel.GetChestObject.maxCoins} \n Gems Range {chestModel.GetChestObject.minGems} - {chestModel.GetChestObject.maxGems} ");
             ChestService.Instance.ShowMessage(msg);
         }
-
         public void OnUnlockClicked(string title)
         {
             if (chestSlotController)
@@ -76,7 +75,6 @@ namespace ChestSystem.Chest.MVC
             startCountDown = true;
             OnStartUnlocking();
             ChestService.Instance.CurrentUnlockingChestId = chestSlotController.ChestSlotID;
-
         }
 
         private void OnStartUnlocking()
@@ -88,8 +86,7 @@ namespace ChestSystem.Chest.MVC
                 ChestService.Instance.GetChestSlotsController.RemoveFromUnlockQueue(chestSlotController.ChestSlotID);
             }
         }
-
-        private void CheckUnlocked()
+        private void CheckUnlock()
         {
             unlockTimer -= Time.deltaTime;
             if (unlockTimer <= unlockDuration - 1)
@@ -141,6 +138,5 @@ namespace ChestSystem.Chest.MVC
         {
             chestView = _view;
         }
-
     }
 }

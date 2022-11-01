@@ -12,11 +12,8 @@ namespace ChestSystem.Chest
 
         private void Start()
         {
-            chestSlotsController = ChestService.Instance.GetChestSlotsController;
-            if (chestSlotsController)
-            {
-                Debug.Log("wtf");
-            }
+           chestSlotsController = ChestService.Instance.GetChestSlotsController;
+          
         }
         public void SpawnChest(ChestType chestType)
         {
@@ -29,14 +26,17 @@ namespace ChestSystem.Chest
 
         public void SpawnChest()
         {
+            
            
             int index = Random.Range(0, chestConfiguration.ChestList.Count);
+
+             if (chestSlotsController)
+             {
+
+                 chestSlotsController.SpawnChest(chestConfiguration.ChestList[index]);
+             }
+            //ChestService.Instance.GetChestSlotsController.SpawnChest(chestConfiguration.ChestList[index]);
             
-            if (chestSlotsController)
-            {
-                
-                chestSlotsController.SpawnChest(chestConfiguration.ChestList[index]);
-            }
 
         }
         public float GetTimeToSkipFor1Gem { get { return timeToskipFor1Gem; } }
