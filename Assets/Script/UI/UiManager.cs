@@ -83,7 +83,7 @@ namespace ChestSystem.UI
             ChestService chestService = ChestService.Instance;
             if (chestService)
             {
-                Debug.Log("button");
+                
                 chestService.SpawnChest();
                
             }

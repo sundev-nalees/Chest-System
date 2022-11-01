@@ -55,6 +55,7 @@ namespace ChestSystem.Chest
                     GameObject chestPrefab = chests.Find(item => item.chestTypes == config.chestType).chestPrefab;
                     if (chestPrefab)
                     {
+                        
                         chestSlots[i].chestSlotController.SpawnChest(chestPrefab, config);
                     }
                     return;
